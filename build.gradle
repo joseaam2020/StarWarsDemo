@@ -1,0 +1,27 @@
+plugins {
+    id 'application'
+}
+repositories {
+    jcenter()
+}
+sourceSets {
+    main {
+        java {
+            srcDirs 'src'
+        }
+    }
+}
+application{
+    mainClass='src/demo/starwars/Main.java'
+}
+dependencies {
+
+    compile group: 'com.fasterxml.jackson.core', name: 'jackson-annotations', version: '2.11.3'
+    compile group: 'com.fasterxml.jackson.core', name: 'jackson-core', version: '2.11.3'
+    compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.0.1'
+    implementation 'org.apache.httpcomponents.client5:httpclient5-fluent:5.0.3'
+    compile group: 'org.slf4j', name: 'slf4j-simple', version: '1.6.1'
+    compile 'org.jdeferred:jdeferred-android-aar:+'
+    compile group: 'org.slf4j', name: 'slf4j-api', version: '1.7.25'
+
+}
